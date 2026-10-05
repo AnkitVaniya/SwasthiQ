@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: sunrise-front-desk-agent
+    runtime: docker
+    plan: free
+    healthCheckPath: /health

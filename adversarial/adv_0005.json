@@ -1,0 +1,21 @@
+{
+  "id": "adv_0005",
+  "description": "Guardian with two same-age children, never says which one.",
+  "today": "2026-10-01",
+  "turns": [
+    "Mere bete ko Dr. Sethi ke paas dikhana hai, 8 tareekh subah.",
+    "Sunita Gupta, 9812200166."
+  ],
+  "expected": {
+    "terminal_state": "escalated",
+    "escalation_reason": "ambiguous_patient",
+    "must_call": [
+      "lookup_patient",
+      "escalate_to_human"
+    ],
+    "must_not_call": [
+      "book_appointment"
+    ],
+    "notes": "Sunita is authorised for both Aarav and Arjun (same surname, DOB, phone). Picking the first ward books a child who may not be the one who is ill."
+  }
+}

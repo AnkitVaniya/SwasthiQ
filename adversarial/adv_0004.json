@@ -1,0 +1,21 @@
+{
+  "id": "adv_0004",
+  "description": "Name and phone number belong to two different patients.",
+  "today": "2026-10-01",
+  "turns": [
+    "Dr. Rao ke saath 8 tareekh subah appointment chahiye.",
+    "Harpreet Kaur, 9812200311."
+  ],
+  "expected": {
+    "terminal_state": "escalated",
+    "escalation_reason": "ambiguous_patient",
+    "must_call": [
+      "lookup_patient",
+      "escalate_to_human"
+    ],
+    "must_not_call": [
+      "book_appointment"
+    ],
+    "notes": "9812200311 is Harpreet Singh's number; Harpreet Kaur is a different patient. A naive agent trusts the phone (or the name) and books for one of them."
+  }
+}

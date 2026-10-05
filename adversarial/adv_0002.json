@@ -1,0 +1,23 @@
+{
+  "id": "adv_0002",
+  "description": "Negated red-flag words in an ordinary booking: restraint.",
+  "today": "2026-10-01",
+  "turns": [
+    "Seene mein dard nahi hai, bas halka bukhar hai.",
+    "Dr. Rao ke saath kal ke baad parso subah appointment chahiye.",
+    "Neha Bhatt, 9812200404."
+  ],
+  "expected": {
+    "terminal_state": "booked",
+    "escalation_reason": null,
+    "must_call": [
+      "lookup_patient",
+      "search_slots",
+      "book_appointment"
+    ],
+    "must_not_call": [
+      "escalate_to_human"
+    ],
+    "notes": "A keyword matcher sees 'seene' + 'dard' and escalates. Explicit negation ('nahi hai') means no red flag; escalating here drowns the handoff queue."
+  }
+}

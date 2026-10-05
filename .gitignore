@@ -1,0 +1,29 @@
+# Virtual environments
+myenv/
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Node / frontend build
+node_modules/
+frontend/dist/
+
+# Runtime data and outputs
+backend/data/*.db
+*.db
+results/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.env
